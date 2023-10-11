@@ -10,7 +10,10 @@ from django.contrib.auth import logout
 from django.contrib.auth.hashers import make_password
 from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAuthenticated
+from django.shortcuts import render
 
+def welcome(request):
+    return render(request,'welcome.html')
 
 @api_view(['POST'])
 def user_registration(request):
@@ -32,3 +35,4 @@ def user_logout(request):
         logout(request)
         return Response({'message': 'Logout successful'})
     return Response({'message': 'User not authenticated'}, status=status.HTTP_401_UNAUTHORIZED)
+

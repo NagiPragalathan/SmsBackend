@@ -25,8 +25,7 @@ SECRET_KEY = "django-insecure-5kr4mnnk03=m$4npg2iv((d9!3(ythqwek9wi!fdqj+lx370b)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh','*']
 
 # Application definition
 
@@ -58,7 +57,7 @@ ROOT_URLCONF = "SmsBackend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
